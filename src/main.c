@@ -15,10 +15,10 @@ int main (int argc, char *argv[])
     exit (EXIT_FAILURE);
   }
 
-  rule_t *rules = get_rules (argv[1]);
-  print_rules (rules);
+  rule_t *rules = get_rules (argv[1]);  //탐지 규칙 파일 로드
+  print_rules (rules);  
 
-  pcap_t *handle = pcap_init ();
+  pcap_t *handle = pcap_init ();  //pcap 초기화: handle 생성
 
   int data_link_offset = pcap_datalink_offset (handle);
 
